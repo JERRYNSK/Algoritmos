@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1777126523 source:/home/jerrynsk/CODEBLOCKS_PROJECTS/TADJerry/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Matrix.h"
+
+1777125697 /home/jerrynsk/CODEBLOCKS_PROJECTS/TADJerry/Matrix.h
+
+1777126504 source:/home/jerrynsk/CODEBLOCKS_PROJECTS/TADJerry/Matrix.c
+	<stdio.h>
+	<stdlib.h>
+	"Matrix.h"
+
