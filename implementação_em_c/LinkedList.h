@@ -1,10 +1,7 @@
 #ifndef LinkedList
 #define LinkedList
 
-typedef struct item{
-    int value;
-    struct item *node;
-} Node;
+typedef struct _node_ Node;
 
 void printLinkedList(Node* start);
 void insert(Node* start, Node* node);

@@ -2,10 +2,14 @@
 #include<stdlib.h>
 #include "LinkedList.h"
 
+typedef struct _node_ Node;
 
+struct _node_ {
+    int value;
+    Node* node;
+};
 
-
-    void printLinkedList(Node* start){
+void printLinkedList(Node* start){
         Node* holder = NULL;
         int i = 0;
         while (start != NULL && (start -> node) != NULL){
@@ -15,7 +19,7 @@
             i++;
         }
 
-    }
+}
 //digamos que o insert seja sempre no final do node
     void insert(Node* start, Node* node){
         Node* holder = NULL;
