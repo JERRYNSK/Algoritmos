@@ -21,20 +21,32 @@ void printLinkedList(Node* start){
 
 }
 //digamos que o insert seja sempre no final do node
-    void insert(Node* start, Node* node){
+void insert(Node* start, Node* node){
         Node* holder = NULL;
         while ((start -> node) != NULL){
             start = (start -> node);
         }
         start -> node = node;
+}
+
+void removeAt(Node* start, int index){
+
+}
+
+
+Node* get(Node* start, int index){
+    int i = 0;
+    if (start != NULL){
+        if(i == index) return start;//rascunho pra 0? vou dormir fds essa merda kkkkk
+        while(start -> node != NULL){
+            i++;
+            start = start -> node;
+            if(i == )
+
+
+        }
+        return
     }
-
-    void removeAt(Node* start, int index){
-
-    }
-
-    Node* get(Node* start, int index){
-
     return NULL;
 
 }
