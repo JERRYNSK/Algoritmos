@@ -7,6 +7,6 @@ LIST* listCreate();
 int listPush(LIST* node, void* item);
 void* listPop(LIST* node);
 void* topList(LIST* node);
-int flushList(LIST* node);
+int destroyList(LIST* node);
 
 #endif // _lista_
