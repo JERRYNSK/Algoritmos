@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1778558280 source:/home/jerrynsk/CODEBLOCKS_PROJECTS/GeneralCofo/Gcofo.c
+	<stdio.h>
+	<stdlib.h>
+	"Gcofo.h"
+
+1778557946 /home/jerrynsk/CODEBLOCKS_PROJECTS/GeneralCofo/Gcofo.h
+
+1778558583 source:/home/jerrynsk/CODEBLOCKS_PROJECTS/GeneralCofo/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Gcofo.h"
+	<string.h>
+	<math.h>
+

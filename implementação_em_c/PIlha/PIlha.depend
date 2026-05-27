@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1779109646 source:/home/jerrynsk/CODEBLOCKS_PROJECTS/PIlha/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Pilha.h"
+
+1779107361 /home/jerrynsk/CODEBLOCKS_PROJECTS/PIlha/Pilha.h
+	<stdlib.h>
+	<stdio.h>
+
+1779109904 source:/home/jerrynsk/CODEBLOCKS_PROJECTS/PIlha/Pilha.c
+	"Pilha.h"
+
