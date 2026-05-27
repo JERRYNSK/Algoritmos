@@ -59,9 +59,10 @@ void* listGetFirst(LIST* node){
 }
 
 int flushList(LIST* node){
-    if(node->next != NULL){
-        return flushList(node -> next);
+    if(node -> next == NULL){
+        free(node);
+        return 1;
     }
+    flushList(node -> next);
     free(node);
-    return 1;
 }
