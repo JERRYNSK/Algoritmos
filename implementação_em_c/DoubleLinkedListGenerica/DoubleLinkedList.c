@@ -21,6 +21,8 @@ DLIST* DLLcreate(){
     node = (DLIST*) malloc(sizeof(DLIST));
     if(node != NULL){
         node -> first = NULL;
+        node -> last = NULL;
+        node -> cur = NULL;
         return node;
     }
     return NULL;
@@ -86,21 +88,19 @@ void* DLLpop(DLIST* l){
 }
 int DLLconsultar(DLIST* l, void* key, int(*cmp)(void*, void*)){
     int stat = FALSE;
+
     if(l != NULL){
         if(l ->first != NULL){
             l -> cur = l -> first;
-            stat = cmp(l -> cur -> data, key);
-            while(l -> cur != l -> last && stat == FALSE){
+            do {
                 stat = cmp(l -> cur -> data, key);
+                if(stat == TRUE) return TRUE;
                 l -> cur = l -> cur -> next;
-            }
-            if(stat == TRUE){
-                return TRUE;
-            }
+            } while(l -> cur != l->first);
 
         }
     }
-    return FALSE;
+    return stat;
 }
 int DLLinsertBefore(DLIST* l, void* key, void* value, int(*cmp)(void*, void*)){
     int stat;
@@ -147,16 +147,6 @@ void* DLLremove(DLIST* l, void* key, int (*cmp)(void*, void*)){
     if(l != NULL){
         if(l -> first != NULL){
             l -> cur = l -> first;
-            /*stat = cmp(key, l->cur->data);
-            prev = l->cur->prev;
-            next = l->cur->next;
-            while(l -> cur != l -> first && stat == FALSE){
-                stat = cmp(key, l->cur->data);
-                prev = l->cur->prev;
-                next = l->cur->next;
-                //if(stat == TRUE) break;
-                l -> cur = l -> cur -> next;
-            }*/
             do {
                 stat = cmp(key, l->cur->data);
                 prev = l->cur->prev;
@@ -172,8 +162,14 @@ void* DLLremove(DLIST* l, void* key, int (*cmp)(void*, void*)){
                 next -> prev = prev;
 
                 data = removedNode-> data;
-                if(removedNode == l -> first) l->first = next;
-                else if(removedNode == l-> last) l-> last = prev;
+                if (l -> first != l -> last){
+                    if(removedNode == l -> first) l->first = next;
+                    else if(removedNode == l-> last) l-> last = prev;
+                } else {
+                    l->first = NULL;
+                    l->last = NULL;
+                }
+
                 free(removedNode);
 
                 return data;

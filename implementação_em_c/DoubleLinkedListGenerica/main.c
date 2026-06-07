@@ -26,7 +26,8 @@ int main()
 
     //printf("esta la: %d\n", DLLconsultar(lista, (void*) 30, compare));
     //DLLinsertBefore(lista, (void*)60, (void*)222, compare);
-    DLLremove(lista, (void*)10, compare);
+    //DLLremove(lista, (void*)10, compare);
+    printf("tem? %d\n", DLLconsultar(lista, (void*)40, compare));
     DLLimprimir(lista);
 
     return 0;
