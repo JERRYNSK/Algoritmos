@@ -53,6 +53,7 @@ void* topList(LIST* node){
     return NULL;
 }
 int destroyList(LIST* node){
+
     if(node -> next == NULL){
         free(node);
         return 1;
