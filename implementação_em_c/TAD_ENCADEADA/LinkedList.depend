@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1779848002 source:/home/jerrynsk/CODEBLOCKS_PROJECTS/LinkedList-fila/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+
+1779847450 /home/jerrynsk/CODEBLOCKS_PROJECTS/LinkedList-fila/LinkedList.h
+
+1779847911 source:/home/jerrynsk/CODEBLOCKS_PROJECTS/LinkedList-fila/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+
